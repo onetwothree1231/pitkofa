@@ -1,0 +1,78 @@
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    background-color: #FFB6C1; /* Нежно розовый */
+    color: #9932CC; /* Фиолетовый */
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background-color: #FFB6C1; /* Нежно розовый */
+    overflow: hidden;
+}
+
+.invite-text {
+    margin-bottom: 20px;
+}
+
+/* Стили для фотографий */
+img {
+    width: 400px; /* Исходная ширина изображений */
+    height: 400px; /* Исходная высота изображений */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Стили для кнопок */
+.buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background-color: #FAF0E6; /* Светло-бежевый */
+    color: #9932CC; /* Фиолетовый */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FFE4B5; /* Персиковый */
+}
+
+/* При мобильном просмотре */
+@media screen and (max-width: 600px) {
+    img {
+        width: 50%; /* Уменьшаем ширину изображений до 50% ширины экрана */
+        height: auto; /* Сохраняем соотношение сторон */
+    }
+
+    .buttons {
+        position: relative;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    button {
+        width: 80%; /* Уменьшаем ширину кнопок до 80% ширины контейнера */
+        margin-bottom: 10px; /* Добавляем отступ между кнопками */
+    }
+}
+
